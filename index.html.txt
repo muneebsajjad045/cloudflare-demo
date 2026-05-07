@@ -1,0 +1,24 @@
+export default {
+  async fetch(request) {
+
+    const html = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>My Static Website</title>
+    </head>
+
+    <body>
+      <h1>Cloudflare Static Website</h1>
+      <p>Hosted using Cloudflare Pages.</p>
+    </body>
+    </html>
+    `;
+
+    return new Response(html, {
+      headers: {
+        "content-type": "text/html",
+      },
+    });
+  },
+};
